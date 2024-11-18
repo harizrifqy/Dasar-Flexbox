@@ -1,0 +1,45 @@
+body {
+    min-height: 800px;
+    border: 8px solid black;
+    display: flex;
+    gap: 20px; /* untuk mengatur jarak antar kotak */
+    /* flex-direction: column; secara default flex-direction itu row */
+    /* justify-content: space-evenly;  membuat box memiliki jarak yang sama */
+    /* align-items: center;  untuk mengubah posisi box menjadi ditengah */
+    /* flex-wrap: wrap; ketika ukuran layar mengecil kotak otomatis menyesuaikan atau kotak akan kebawah */
+    /* align-content: center; secara default space-around */
+}
+
+#box-1 {
+    align-self: center; /* membuat kotak satu menjadi ketengah sendiiri*/
+    /* flex-shrink: 0; mencegah penyusutan hanya pada box pertama atau menjaga ukuran awal */
+    /* flex-grow: 1; kotak pertama akan mengisi semua ruang kosong yang ada */
+}
+
+.box{
+    /* flex-shrink: 1; mencegah penyusutan kotak karena ukurannya tidak dapat lagi berubah */
+    /* flex-grow: 0; mencegah kotak agar tidak mengisi semua ruang kosong yang ada */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+    background-color: #0071ff;
+    font-size: 40px;
+}
+
+@media(max-width: 575px){
+    body{
+        flex-wrap: wrap;
+    }
+}
+
+
+/* SUMMARY */
+
+/* justify-content ( Main-Axis Alignment)*/
+/* align-items ( Cross-Axis Alignment)*/
+/* flex-wrap ( Responsive line breaks) */
+/* flex-shrink (Allow getting smaller) */
+/* flex-grow (Allow getting bigger) */
+/* min-widht & max-width ( limit flex-grow & shrink)  */
